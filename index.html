@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wings of Brotherhood | Interactive Film Experience</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Cursor Trail -->
+    <div class="cursor-trail"></div>
+    
+    <!-- Scrolling Birds -->
+    <div class="scrolling-birds" id="scrollingBirds">
+        <div class="bird-silhouette">🐦</div>
+        <div class="bird-silhouette">🕊️</div>
+    </div>
+    
+    <!-- Interactive Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo-container">
+                <div class="logo">WINGS</div>
+                <div class="logo-subtitle">OF BROTHERHOOD</div>
+            </div>
+            <div class="nav-menu">
+                <a href="#hero" class="nav-link" data-text="Watch">Watch</a>
+                <a href="#story" class="nav-link" data-text="Story">Story</a>
+                <a href="#cast" class="nav-link" data-text="Cast">Cast</a>
+                <a href="#experience" class="nav-link" data-text="Experience">Experience</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Immersive Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-bg">
+            <div class="floating-particles"></div>
+        </div>
+        
+        <div class="hero-content">
+            <div class="title-container">
+                <h1 class="main-title">
+                    <span class="title-word" data-word="WINGS">WINGS</span>
+                    <span class="title-word" data-word="OF">OF</span>
+                    <span class="title-word" data-word="BROTHERHOOD">BROTHERHOOD</span>
+                </h1>
+                <div class="subtitle-container">
+                    <p class="tagline">Some bonds transcend hunger, transcend death, transcend everything</p>
+                </div>
+            </div>
+
+            <div class="video-experience">
+                <div class="video-wrapper">
+                    <div class="play-button" id="playButton">
+                        <div class="play-icon"></div>
+                        <div class="play-text">EXPERIENCE</div>
+                    </div>
+<iframe 
+  id="mainVideo" 
+  class="hidden-video"
+  src="https://drive.google.com/file/d/1JeK_sdNSjNHHvHytWKn6mZRC9Ussy9wz/preview"
+  allow="autoplay"
+  frameborder="0"
+  allowfullscreen>
+</iframe>
+
+                
+                <div class="film-stats">
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="90">0</div>
+                        <div class="stat-label">SECONDS</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="2">0</div>
+                        <div class="stat-label">BROTHERS</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="1">0</div>
+                        <div class="stat-label">PROMISE</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="scroll-prompt">
+            <div class="scroll-text">DISCOVER THE STORY</div>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- Interactive Story Timeline -->
+    <section id="story" class="story-section">
+        <div class="container">
+            <h2 class="section-title">THE JOURNEY</h2>
+            
+            <div class="story-timeline">
+                <div class="timeline-item" data-scene="1">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>THE PROMISE</h3>
+                        <p>On his deathbed, Papa Bird delivers a final wish to his sons: "Never leave each other." A bond forged in love, sealed by loss.</p>
+                        <div class="scene-visual">𓅪</div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item" data-scene="2">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>THE QUEST</h3>
+                        <p>Zazu and Kevin venture through NYUAD's Arts Center, two souls united in purpose yet divided in spirit. Food is the goal, but brotherhood is the journey.</p>
+                        <div class="scene-visual">𓅍𓅍</div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item" data-scene="3">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>THE TENSION</h3>
+                        <p>Optimism meets cynicism. Hope clashes with despair. In their conversation lies the heart of every relationship that has ever mattered.</p>
+                        <div class="scene-visual">ᴖ̈</div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item" data-scene="4">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>THE TRUTH</h3>
+                        <p>Sometimes staying together isn't about agreeing. Sometimes love means accepting the parts of each other we can't understand.</p>
+                        <div class="scene-visual">❤︎</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dynamic Cast Cards -->
+    <section id="cast" class="cast-section">
+        <div class="container">
+            <h2 class="section-title">THE SOULS</h2>
+            
+            <div class="cast-cards">
+                <div class="character-card" data-character="zazu">
+                    <div class="card-front">
+                        <div class="character-avatar zazu-avatar"></div>
+                        <h3>ZAZU</h3>
+                        <p class="character-type">THE OPTIMIST</p>
+                    </div>
+                    <div class="card-back">
+                        <div class="character-details">
+                            <h4>THE LIGHT BEARER</h4>
+                            <p>"Every shadow hides an opportunity, every setback births a comeback. Zazu doesn't just see the glass half full—he sees the infinite possibilities in every drop."</p>
+                            <div class="character-traits">
+                                <span>Hopeful</span>
+                                <span>Guiding</span>
+                                <span>Unbreakable</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="character-card" data-character="kevin">
+                    <div class="card-front">
+                        <div class="character-avatar kevin-avatar"></div>
+                        <h3>KEVIN</h3>
+                        <p class="character-type">THE REALIST</p>
+                    </div>
+                    <div class="card-back">
+                        <div class="character-details">
+                            <h4>THE TRUTH TELLER</h4>
+                            <p>"Boredom is honesty. Cynicism is clarity. Kevin sees the world without filters, and sometimes that vision cuts deeper than hope ever could."</p>
+                            <div class="character-traits">
+                                <span>Honest</span>
+                                <span>Grounded</span>
+                                <span>Complex</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="character-card" data-character="papa">
+                    <div class="card-front">
+                        <div class="character-avatar papa-avatar"></div>
+                        <h3>PAPA BIRD</h3>
+                        <p class="character-type">THE LEGACY</p>
+                    </div>
+                    <div class="card-back">
+                        <div class="character-details">
+                            <h4>THE ETERNAL BOND</h4>
+                            <p>"In his final breath, he planted a seed that would grow through every argument, every laugh, every moment his sons would share. Love persists."</p>
+                            <div class="character-traits">
+                                <span>Wise</span>
+                                <span>Eternal</span>
+                                <span>Binding</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Experience Gallery -->
+    <section id="experience" class="experience-section">
+        <div class="container">
+            <h2 class="section-title">BEHIND THE MAGIC</h2>
+            
+            <div class="experience-grid">
+                <div class="experience-item" data-experience="location">
+                    <div class="experience-visual">
+                        <div class="visual-overlay"></div>
+                        <div class="visual-content">🏛️</div>
+                    </div>
+                    <div class="experience-info">
+                        <h3>NYUAD ARTS CENTER</h3>
+                        <p>Where architecture meets artistry, creating the perfect backdrop for our feathered protagonists' urban adventure.</p>
+                    </div>
+                </div>
+
+                <div class="experience-item" data-experience="direction">
+                    <div class="experience-visual">
+                        <div class="visual-overlay"></div>
+                        <div class="visual-content">🎬</div>
+                    </div>
+                    <div class="experience-info">
+                        <h3>DIRECTORIAL VISION</h3>
+                        <p>Capturing authentic bird behavior while weaving a narrative that speaks to the universal human experience of family bonds.</p>
+                    </div>
+                </div>
+
+                <div class="experience-item" data-experience="sound">
+                    <div class="experience-visual">
+                        <div class="visual-overlay"></div>
+                        <div class="visual-content">🎵</div>
+                    </div>
+                    <div class="experience-info">
+                        <h3>AUTHENTIC VOICES</h3>
+                        <p>Every chirp, every conversation, every moment of silence crafted to reveal the complex emotions beneath feathered exteriors.</p>
+                    </div>
+                </div>
+
+                <div class="experience-item" data-experience="editing">
+                    <div class="experience-visual">
+                        <div class="visual-overlay"></div>
+                        <div class="visual-content">✂️</div>
+                    </div>
+                    <div class="experience-info">
+                        <h3>90-SECOND PERFECTION</h3>
+                        <p>Each frame serves the story. Every cut builds emotion. In the constraints of brevity, we found the freedom of pure cinema.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Floating Reviews -->
+    <section class="reviews-section">
+        <div class="container">
+            <h2 class="section-title">CRITICAL ACCLAIM</h2>
+            
+            <div class="floating-reviews">
+                <div class="review-bubble" data-rating="5">
+                    <div class="bubble-content">
+                        <p>"A masterpiece of micro-storytelling that proves great art knows no boundaries of time or species."</p>
+                        <cite>— Cinema Scope</cite>
+                    </div>
+                </div>
+                
+                <div class="review-bubble" data-rating="5">
+                    <div class="bubble-content">
+                        <p>"In 90 seconds, more emotional truth than most feature films achieve in 90 minutes."</p>
+                        <cite>— Short Film Universe</cite>
+                    </div>
+                </div>
+                
+                <div class="review-bubble" data-rating="4">
+                    <div class="bubble-content">
+                        <p>"Zazu and Kevin's dynamic captures the beautiful complexity of sibling relationships with remarkable authenticity."</p>
+                        <cite>— Festival Circuit</cite>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-title">WINGS OF BROTHERHOOD</div>
+            <div class="footer-subtitle">A 30MFF EXPERIENCE</div>
+            <div class="footer-year">2025</div>
+        </div>
+        <div class="footer-glow"></div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
