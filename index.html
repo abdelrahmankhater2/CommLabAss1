@@ -10,11 +10,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Cursor Trail -->
+    <!-- cursor Trail follows mouse movement -->
     <div class="cursor-trail"></div>
     
-    <!-- Scrolling Birds -->
+    <!-- Animated birds that scroll across the screen for visual atmosphere -->
 <div id="scrollingBirds" class="scrolling-birds">
+      <!-- Bird silhouette images -->
   <img class="bird-silhouette" src="images/bird1.png" alt="Flying bird">
   <img class="bird-silhouette" src="images/bird2.png" alt="Flying bird">
 </div>
@@ -23,10 +24,12 @@
     <!-- Interactive Navigation -->
     <nav class="navbar">
         <div class="nav-container">
+                    <!-- Logo and subtitle -->
             <div class="logo-container">
                 <div class="logo">WINGS</div>
                 <div class="logo-subtitle">OF BROTHERHOOD</div>
             </div>
+         <!-- Navigation menu linking to page sections -->
             <div class="nav-menu">
                 <a href="#hero" class="nav-link" data-text="Watch">Watch</a>
                 <a href="#story" class="nav-link" data-text="Story">Story</a>
@@ -43,23 +46,28 @@
         </div>
         
         <div class="hero-content">
+    <!-- Main title with animated word spans -->
             <div class="title-container">
                 <h1 class="main-title">
                     <span class="title-word" data-word="WINGS">WINGS</span>
                     <span class="title-word" data-word="OF">OF</span>
                     <span class="title-word" data-word="BROTHERHOOD">BROTHERHOOD</span>
                 </h1>
+        <!-- Tagline below the title -->
                 <div class="subtitle-container">
                     <p class="tagline">Some bonds transcend hunger, transcend death, transcend everything</p>
                 </div>
             </div>
-
+    <!-- Interactive video experience area -->
             <div class="video-experience">
                 <div class="video-wrapper">
+                <!-- Custom play button triggers embedded video -->
                     <div class="play-button" id="playButton">
                         <div class="play-icon"></div>
                         <div class="play-text">EXPERIENCE</div>
                     </div>
+
+                <!-- Embedded video player -->
 <iframe 
   id="mainVideo" 
   class="hidden-video"
@@ -71,6 +79,7 @@
 
                 
                 <div class="film-stats">
+                        <!-- Duration of the film -->
                     <div class="stat-item">
                         <div class="stat-number" data-target="90">0</div>
                         <div class="stat-label">SECONDS</div>
@@ -97,17 +106,18 @@
     <section id="story" class="story-section">
         <div class="container">
             <h2 class="section-title">THE JOURNEY</h2>
-            
+                    <!-- Scene 1: The emotional foundation of the story -->
             <div class="story-timeline">
                 <div class="timeline-item" data-scene="1">
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
                         <h3>THE PROMISE</h3>
                         <p>On his deathbed, Papa Bird delivers a final wish to his sons: "Never leave each other." A bond forged in love, sealed by loss.</p>
+                      <!-- Visual icon representing the scene -->
                         <div class="scene-visual">𓅪</div>
                     </div>
                 </div>
-                
+            
                 <div class="timeline-item" data-scene="2">
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
@@ -141,16 +151,23 @@
     <!-- Dynamic Cast Cards -->
     <section id="cast" class="cast-section">
         <div class="container">
+     <!-- Section heading -->
             <h2 class="section-title">THE SOULS</h2>
             
+    <!-- Cast cards: flip on hover to reveal more details -->
             <div class="cast-cards">
+                <!-- Character Card: Zazu -->
                 <div class="character-card" data-character="zazu">
                     <div class="card-front">
+
+                    <!-- Front side with avatar and archetype -->
                         <div class="character-avatar zazu-avatar"></div>
                         <h3>ZAZU</h3>
                         <p class="character-type">THE OPTIMIST</p>
                     </div>
+                <!-- Back side with deeper character insight -->
                     <div class="card-back">
+                        <!-- Traits displayed as tags -->
                         <div class="character-details">
                             <h4>THE LIGHT BEARER</h4>
                             <p>"Every shadow hides an opportunity, every setback births a comeback. Zazu doesn't just see the glass half full—he sees the infinite possibilities in every drop."</p>
@@ -164,12 +181,15 @@
                 </div>
 
                 <div class="character-card" data-character="kevin">
+                        <!-- Front side with avatar and archetype -->
                     <div class="card-front">
                         <div class="character-avatar kevin-avatar"></div>
                         <h3>KEVIN</h3>
                         <p class="character-type">THE REALIST</p>
                     </div>
+                        <!-- Back side with deeper character insight -->
                     <div class="card-back">
+                                    <!-- Traits displayed as tags -->
                         <div class="character-details">
                             <h4>THE TRUTH TELLER</h4>
                             <p>"Boredom is honesty. Cynicism is clarity. Kevin sees the world without filters, and sometimes that vision cuts deeper than hope ever could."</p>
@@ -181,17 +201,19 @@
                         </div>
                     </div>
                 </div>
-
+                <!-- Character Card: Papa Bird -->
                 <div class="character-card" data-character="papa">
                     <div class="card-front">
                         <div class="character-avatar papa-avatar"></div>
                         <h3>PAPA BIRD</h3>
                         <p class="character-type">THE LEGACY</p>
                     </div>
+                        <!-- Back side with deeper character insight -->
                     <div class="card-back">
                         <div class="character-details">
                             <h4>THE ETERNAL BOND</h4>
                             <p>"In his final breath, he planted a seed that would grow through every argument, every laugh, every moment his sons would share. Love persists."</p>
+                             <!-- Traits displayed as tags -->
                             <div class="character-traits">
                                 <span>Wise</span>
                                 <span>Eternal</span>
@@ -262,22 +284,22 @@
         <div class="container">
             <h2 class="section-title">CRITICAL ACCLAIM</h2>
             
-            <div class="floating-reviews">
-                <div class="review-bubble" data-rating="5">
+            <div class="floating-reviews">    <!-- Animated review bubbles with audience quotes -->
+                <div class="review-bubble" data-rating="5">     <!-- Review 1: 5-star rating -->
                     <div class="bubble-content">
                         <p>"A masterpiece of micro-storytelling that proves great art knows no boundaries of time or species."</p>
                         <cite>— My friend Marwan</cite>
                     </div>
                 </div>
                 
-                <div class="review-bubble" data-rating="5">
+                <div class="review-bubble" data-rating="5">    <!-- Review 2: 5-star rating -->
                     <div class="bubble-content">
                         <p>"In 90 seconds, more emotional truth than most feature films achieve in 90 minutes."</p>
                         <cite>— My mother</cite>
                     </div>
                 </div>
                 
-                <div class="review-bubble" data-rating="4">
+                <div class="review-bubble" data-rating="4">      <!-- Review 3: 4-star rating -->
                     <div class="bubble-content">
                         <p>"Zazu and Kevin's dynamic captures the beautiful complexity of sibling relationships with remarkable authenticity."</p>
                         <cite>— My 6-year-old brother</cite>
@@ -287,16 +309,18 @@
         </div>
     </section>
 
-    <!-- Interactive Footer -->
+    <!-- Footer with Glow Effect -->
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-title">WINGS OF BROTHERHOOD</div>
             <div class="footer-subtitle">A 30MFF EXPERIENCE</div>
             <div class="footer-year">2025</div>
         </div>
+            <!-- Visual glow effect (likely styled with CSS animation) -->
         <div class="footer-glow"></div>
     </footer>
 
+<!-- Main JavaScript file for interactivity and animations -->
     <script src="script.js"></script>
 </body>
 </html>

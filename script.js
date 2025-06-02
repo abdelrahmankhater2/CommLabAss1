@@ -1,17 +1,17 @@
 // Advanced Interactive Features for Wings of Brotherhood
 document.addEventListener('DOMContentLoaded', function() {
     
-    // Custom Cursor Trail
+        // Select the custom cursor trail element from the DOM
     const cursorTrail = document.querySelector('.cursor-trail');
     let mouseX = 0, mouseY = 0;
     let cursorX = 0, cursorY = 0;
     
-    document.addEventListener('mousemove', (e) => {
+    document.addEventListener('mousemove', (e) => { // Update cursor position on mouse move
         mouseX = e.clientX;
         mouseY = e.clientY;
     });
     
-    function animateCursor() {
+    function animateCursor() { // Smoothly animate the cursor trail
         cursorX += (mouseX - cursorX) * 0.1;
         cursorY += (mouseY - cursorY) * 0.1;
         cursorTrail.style.left = cursorX - 10 + 'px';
@@ -20,14 +20,14 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     animateCursor();
 
-    // Scrolling Birds Animation
+    // Custom Cursor Trail Effect
     const scrollingBirds = document.getElementById('scrollingBirds');
     let lastScrollY = window.scrollY;
     let scrollDirection = 'down';
     let birdsVisible = false;
     let birdPosition = -150; // Starting position (off-screen left)
     
-    function updateScrollingBirds() {
+    function updateScrollingBirds() { // Update bird position based on scroll
         const currentScrollY = window.scrollY;
         const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
         const scrollProgress = currentScrollY / maxScroll;
@@ -87,7 +87,7 @@ playButton.addEventListener('click', function () {
   playButton.style.opacity = '0';
   playButton.style.transform = 'translate(-50%, -50%) scale(0.8)';
 
-  setTimeout(() => {
+  setTimeout(() => { // Delay to allow the button animation to complete
     playButton.style.display = 'none';
     mainVideo.classList.remove('hidden-video');
     mainVideo.classList.add('visible-video');
@@ -120,7 +120,7 @@ playButton.addEventListener('click', function () {
         rootMargin: '0px'
     };
 
-    const statsObserver = new IntersectionObserver((entries) => {
+    const statsObserver = new IntersectionObserver((entries) => { // Observe when stats come into view
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 const target = parseInt(entry.target.getAttribute('data-target'));
@@ -130,7 +130,7 @@ playButton.addEventListener('click', function () {
         });
     }, observerOptions);
 
-    statNumbers.forEach(stat => {
+    statNumbers.forEach(stat => { // Initialize stats observer
         statsObserver.observe(stat);
     });
 
@@ -143,14 +143,14 @@ playButton.addEventListener('click', function () {
             const targetId = this.getAttribute('href');
             const targetSection = document.querySelector(targetId);
             
-            if (targetSection) {
+            if (targetSection) { // Smooth scroll to target section
                 const startPosition = window.pageYOffset;
                 const targetPosition = targetSection.offsetTop - 100;
                 const distance = targetPosition - startPosition;
                 const duration = 1500;
                 let start = null;
 
-                function smoothScroll(timestamp) {
+                function smoothScroll(timestamp) { // Animation function
                     if (!start) start = timestamp;
                     const progress = timestamp - start;
                     const percentage = Math.min(progress / duration, 1);
@@ -162,7 +162,7 @@ playButton.addEventListener('click', function () {
                     
                     window.scrollTo(0, startPosition + distance * easeInOutCubic);
                     
-                    if (progress < duration) {
+                    if (progress < duration) { // Continue animation until duration is reached
                         requestAnimationFrame(smoothScroll);
                     }
                 }
@@ -191,7 +191,7 @@ playButton.addEventListener('click', function () {
     // 3D Card Flip Interaction Enhancement
     const characterCards = document.querySelectorAll('.character-card');
     
-    characterCards.forEach(card => {
+    characterCards.forEach(card => { // Add click interaction for card flip
         let isFlipped = false;
         
         card.addEventListener('click', function() {
@@ -215,11 +215,11 @@ playButton.addEventListener('click', function () {
                 const rotateX = (y - centerY) / 10;
                 const rotateY = (centerX - x) / 10;
                 
-                this.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+                this.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`; //  Apply 3D transform based on mouse position
             }
         });
 
-        card.addEventListener('mouseleave', function() {
+        card.addEventListener('mouseleave', function() { // Reset transform on mouse leave
             if (!isFlipped) {
                 this.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg)';
             }
@@ -229,14 +229,14 @@ playButton.addEventListener('click', function () {
     // Interactive Experience Items
     const experienceItems = document.querySelectorAll('.experience-item');
     
-    experienceItems.forEach(item => {
+    experienceItems.forEach(item => { // Add hover effect to experience items
         item.addEventListener('mouseenter', function() {
             const visual = this.querySelector('.visual-content');
             visual.style.transform = 'scale(1.2) rotateZ(10deg)';
             visual.style.filter = 'drop-shadow(0 0 30px currentColor)';
         });
 
-        item.addEventListener('mouseleave', function() {
+        item.addEventListener('mouseleave', function() { // Reset visual on mouse leave
             const visual = this.querySelector('.visual-content');
             visual.style.transform = 'scale(1) rotateZ(0deg)';
             visual.style.filter = 'drop-shadow(0 0 20px currentColor)';
@@ -290,12 +290,12 @@ playButton.addEventListener('click', function () {
     // Interactive Reviews
     const reviewBubbles = document.querySelectorAll('.review-bubble');
     
-    reviewBubbles.forEach((bubble, index) => {
+    reviewBubbles.forEach((bubble, index) => { // Add hover effect to review bubbles
         bubble.addEventListener('click', function() {
             // Create floating stars effect
             for (let i = 0; i < 5; i++) {
                 const star = document.createElement('div');
-                star.innerHTML = '⭐';
+                star.innerHTML = '⭐'; // Use star emoji for visual effect
                 star.style.position = 'absolute';
                 star.style.left = Math.random() * 100 + '%';
                 star.style.top = Math.random() * 100 + '%';
@@ -321,7 +321,7 @@ playButton.addEventListener('click', function () {
         'KeyB', 'KeyA'
     ];
 
-    document.addEventListener('keydown', function(e) {
+    document.addEventListener('keydown', function(e) { // Listen for Konami Code key presses
         konamiCode.push(e.code);
         
         if (konamiCode.length > konamiSequence.length) {
@@ -341,13 +341,13 @@ playButton.addEventListener('click', function () {
     // Sound Effects (Web Audio API) - Enhanced for dramatic effect
     let audioContext;
     
-    function initAudio() {
+    function initAudio() { // Initialize the audio context if not already done
         if (!audioContext) {
             audioContext = new (window.AudioContext || window.webkitAudioContext)();
         }
     }
     
-    function playTone(frequency, duration, type = 'sine') {
+    function playTone(frequency, duration, type = 'sine') { // Play a tone with specified frequency, duration, and wave type
         initAudio();
         const oscillator = audioContext.createOscillator();
         const gainNode = audioContext.createGain();
@@ -376,11 +376,11 @@ playButton.addEventListener('click', function () {
         setTimeout(() => playTone(1000, 0.1, 'triangle'), 100);
     }
     
-    function playClickSound() {
+    function playClickSound() { // Play a click sound with a square wave
         playTone(440, 0.15, 'square');
     }
     
-    function playHoverSound() {
+    function playHoverSound() { // Play a hover sound with a sawtooth wave
         playTone(220, 0.08, 'sine');
     }
 
@@ -460,4 +460,4 @@ dynamicStyles.textContent = `
         pointer-events: none;
     }
 `;
-document.head.appendChild(dynamicStyles);
+document.head.appendChild(dynamicStyles); // Append dynamic styles to the document head
